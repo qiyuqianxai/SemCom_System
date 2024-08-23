@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Semantic Communication System - Transmitter</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="OneTech shop project">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
+    <link href="plugins/fontawesome-free-5.0.1/css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css">
+    <link rel="stylesheet" type="text/css" href="styles/product_styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/product_responsive.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/logo.ico" media="screen" />
+</head>
+
+
+<body>
+
+    <style type="text/css">
+        .btn-warning {
+            border: 0;
+            border-radius: 50px;
+            color: white;
+            background: #5f55af;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #f72585 50%, #5f55af 50%);
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all 1.2s ease;
+        }
+        button:hover {
+            background-position: left bottom;
+        }
+    </style>
+
+    <!-- <div class="super_container" style="height: 100%;"> -->
+
+    <!-- Header -->
+
+    <header class="header">
+
+        <!-- Top Bar -->
+
+        <div class="top_bar">
+            <div class="container">
+
+                <div class="row">
+                    <div class="top_bar_contact_item">
+                        <div class="top_bar_icon" style="width: 56px;height: 56px;margin-right: 0;align-items: center;"><img src="images/logo.ico" style="height: 60%;width: 60%;" alt=""></div><a href="SemCom.html" style="font-size: large;font-weight: bolder">Home</a></div>
+
+                    <div class="col d-flex flex-row">
+                        <div class="top_bar_contact_item">
+                            <div class="top_bar_icon"><img src="images/phone.png" alt=""></div>+19115621964</div>
+                        <div class="top_bar_contact_item">
+                            <div class="top_bar_icon"><img src="images/mail.png" alt=""></div><a href="mailto:pengyubo@126.com">pengyubo@126.com</a></div>
+                        <div class="top_bar_content ml-auto">
+
+                            <div class="top_bar_user">
+                                <div class="user_icon"><img src="images/user.svg" alt=""></div>
+                                <div><a href="#">Register</a></div>
+                                <div><a href="#">Sign in</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+<!--        <nav class="main_nav">-->
+<!--            <div class="container">-->
+
+<!--                &lt;!&ndash; Main Nav Menu &ndash;&gt;-->
+<!--                <div class="main_nav_menu ml-auto col-lg-12">-->
+<!--                    <ul class="standard_dropdown main_nav_dropdown">-->
+<!--                        <li class="col-lg-2">-->
+<!--                            <a href="/index">home<i class="fas fa-chevron-down"></i></a>-->
+<!--                        </li>-->
+<!--                        -->
+
+
+<!--                    </ul>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </nav>-->
+        <!-- Header Main -->
+        <!-- Menu -->
+
+    </header>
+
+    <!-- Single Product -->
+
+    <div class="main_area" style="margin-top: 2%;margin-bottom: 0%; width: 100%">
+        <div class="container" style="min-width: 100%; height:120%;">
+
+<!--            <h2 style="padding-top: 1%;width:100%">————————————————————— Channel Settings ——————————————————————</h2>-->
+            <!--param setting-->
+            <div id="channel-set" class="row" style="margin-left: 0.5%; margin-right:0.5%; margin-top:2%; margin-bottom:2%; border: #0e8ce4 solid; border-radius: 16px; display: flex; justify-content: space-between;">
+                <div style="width: 30%; display: flex; justify-content: center; align-items: center; margin: 1% auto;">
+                    <button class="btn-primary" style="height: 100%; width: 40%; border-radius: 5px; font-family: 微软雅黑; font-size: large;">Channel</button>
+                    <select class="form-control" id="Channel" style="height: 100%; width: 40%; font-family: 微软雅黑; color: black; font-size: large; text-align: center; border-radius: 5px; border: solid black;margin-left: 0px;">
+                        <option value="AWGN">AWGN</option>
+                        <option value="Rayleigh">Rayleigh</option>
+                        <option value="Rice">Rice</option>
+                    </select>
+                </div>
+                <div style="width: 30%; display: flex; justify-content: center; align-items: center; margin: 1% auto;">
+                    <button class="btn-primary" style="height: 100%; width: 40%; border-radius: 5px; font-family: 微软雅黑; font-size: large;">SNR</button>
+                    <input type="number" id="SNR" value="25" min="-10" max="30" style="height: 100%; width: 40%; border-radius: 5px; font-family: 微软雅黑; font-size: large; text-align: center;">
+                </div>
+            </div>
+
+
+            <div class="row" style="margin-left: 0.5%; margin-right:0.5%; min-width: 94%; border: #0e8ce4 solid; border-radius: 16px;">
+                <div class="col-lg-6 order-lg-2 order-2" style="height: 140%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h3>Source data</h3>
+                    <div style="height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; position: relative; z-index: 1; border: black dashed;">
+                        <div style="width: 100%; display: flex; justify-content: center;">
+                            <input type="file" id="upload_file" style="height: 80%; width: 50%; margin: 1% auto; font-family: 微软雅黑; font-size: large; text-align: center; border-radius: 5px; border: black solid;">
+                        </div>
+                        <div id="source_data" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                            <!-- 这里可以添加内容 -->
+                        </div>
+                    </div>
+
+                    <div style="height: 100%; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; position: relative; z-index: 1;">
+                        <div style="width:40%; display: flex; align-items: center; justify-content: center; margin-left:1%; margin-top:1%; margin-bottom:1%;" >
+                            <h4 id="source_data_size" style="height:80%; width:100%; font-family: 微软雅黑; font-size: large; border:medium none; border-radius: 5px; text-align: center;">Data size: 0 Bytes</h4>
+                        </div>
+                        <div style="width:20%; display: flex; align-items: center; justify-content: center; margin-right:1%; margin-top:1%; margin-bottom:1%;" >
+                            <button id="transmit" class="btn-info" style="height:80%; width:100%; font-family: 微软雅黑; font-size: large; border:medium none; border-radius: 5px;">&nbsp;Transmit&nbsp;&nbsp;➤&nbsp;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 order-lg-2 order-2" style="height: 140%; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <h3>Semantic feature</h3>
+                    <div id="semantics" style="height: 100%; width: 100%; display: flex; align-items: center; justify-content: center; position:relative; z-index:1; border: black dashed; margin-bottom: 1%">
+                        <div style="height: 50px; display: flex; align-items: center; justify-content: center;">
+                            <!-- 这里可以添加内容 -->
+                        </div>
+                    </div>
+
+                    <div style="height: 100%; width: 100%; display: flex; flex-direction: row; align-items: center; justify-content: space-between; position: relative; z-index: 1;">
+                        <div style="width:50%; display: flex; align-items: center; justify-content: center; margin-left:5%; margin-top:1%; margin-bottom:1%;">
+                            <h4 id="semantic_size" style="height:80%; width:100%; font-family: 微软雅黑; font-size: large; border:medium none; border-radius: 5px; text-align: center;">Data size: 0 Bytes <br> Compression Rate: 0%</h4>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- </div> -->
+    <!-- Copyright -->
+
+    <div class="copyright" style="position: absolute;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+
+                    <div class="copyright_container d-flex flex-sm-row flex-column align-items-center justify-content-start">
+                        <div class="copyright_content" style="margin-left: 30%">
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>
+                                document.write(new Date().getFullYear());
+                            </script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="styles/bootstrap4/popper.js"></script>
+<script src="styles/bootstrap4/bootstrap.min.js"></script>
+<script src="plugins/greensock/TweenMax.min.js"></script>
+<script src="plugins/greensock/TimelineMax.min.js"></script>
+<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
+<script src="plugins/greensock/animation.gsap.min.js"></script>
+<script src="plugins/greensock/ScrollToPlugin.min.js"></script>
+<script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="plugins/easing/easing.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/SemCom_T.js"></script>
+<script src="js/controls.js"></script>
+
+</html>
